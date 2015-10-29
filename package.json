@@ -1,10 +1,12 @@
 {
-  "name": "R2",
-  "description": "a CSS LTR ∞ RTL converter",
-  "version": "1.4.1",
-  "homepage": "https://github.com/ded/r2",
+  "name": "liferay-r2",
+  "description": "A fork of the CSS LTR ∞ RTL converter R2 for Liferay",
+  "version": "0.4.0",
+  "homepage": "https://github.com/liferay-labs/r2",
   "author": "Dustin Diaz <dustin@dustindiaz.com>",
-  "maintainers": ["Burak Yigit Kaya <me@byk.im>"],
+  "maintainers": [
+    "Chema Balsas <jose.balsas@liferay.com>"
+  ],
   "main": "r2.js",
   "preferGlobal": true,
   "repository": {
