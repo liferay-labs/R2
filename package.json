@@ -1,7 +1,7 @@
 {
   "name": "liferay-r2",
   "description": "A fork of the CSS LTR ∞ RTL converter R2 for Liferay",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "license": "MIT",
   "homepage": "https://github.com/liferay-labs/r2",
   "author": "Dustin Diaz <dustin@dustindiaz.com>",
