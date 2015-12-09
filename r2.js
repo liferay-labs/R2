@@ -6,7 +6,7 @@
   */
 
 var fs = require('fs')
-  , parser = require('css-parse')
+  , parser = require('liferay-css-parse')
   , builder = require('css-stringify')
   , fa = require('./plugins/fontawesome')
   , bg = require('./plugins/bg')
