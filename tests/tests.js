@@ -25,6 +25,11 @@ sink('border', function(test, ok, before, after, assert) {
     assert.equal(swap('p{border-color:#fff #000;}'), 'p{border-color:#fff #000;}', 'border-color: #fff #000 => border-color: #fff #000')
     assert.equal(swap('p{border-color:#000 #111 #222;}'), 'p{border-color:#000 #111 #222;}', 'border-color: #000 #111 #222 => border-color: #000 #111 #222')
     assert.equal(swap('p{border-color:#000 #111 #222 #333;}'), 'p{border-color:#000 #333 #222 #111;}', 'border-color: #000 #111 #222 #333 => border-color: #000 #333 #222 #111')
+    assert.equal(swap('p{border-color:rgb(0, 0, 0);}'), 'p{border-color:rgb(0, 0, 0);}', 'border-color:rgb(0, 0, 0) => border-color:rgb(0, 0, 0)')
+    assert.equal(swap('p{border-color:rgba(0, 0, 0, 0.15);}'), 'p{border-color:rgba(0, 0, 0, 0.15);}', 'border-color:rgba(0, 0, 0, 0.15) => border-color:rgba(0, 0, 0, 0.15)')
+    assert.equal(swap('p{border-color:rgb(0, 0, 0) rgb(1, 1, 1);}'), 'p{border-color:rgb(0, 0, 0) rgb(1, 1, 1);}', 'border-color:rgb(0, 0, 0) rgb(1, 1, 1) => border-color:rgb(0, 0, 0) rgb(1, 1, 1)')
+    assert.equal(swap('p{border-color:rgb(0, 0, 0) rgb(1, 1, 1) rgb(2, 2, 2);}'), 'p{border-color:rgb(0, 0, 0) rgb(1, 1, 1) rgb(2, 2, 2);}', 'border-color:rgb(0, 0, 0) rgb(1, 1, 1) rgb(2, 2, 2) => border-color:rgb(0, 0, 0) rgb(1, 1, 1) rgb(2, 2, 2)')
+    assert.equal(swap('p{border-color:rgb(0, 0, 0) rgb(1, 1, 1) rgb(2, 2, 2) rgb(3, 3, 3);}'), 'p{border-color:rgb(0, 0, 0) rgb(3, 3, 3) rgb(2, 2, 2) rgb(1, 1, 1);}', 'border-color:rgb(0, 0, 0) rgb(1, 1, 1) rgb(2, 2, 2) rgb(3, 3, 3) => border-color:rgb(0, 0, 0) rgb(3, 3, 3) rgb(2, 2, 2) rgb(1, 1, 1)')
     done()
   })
 
