@@ -14,7 +14,7 @@ var fs = require('fs')
 
 function quad(v, m) {
   // 1px 2px 3px 4px => 1px 4px 3px 2px
-  if ((m = v.trim().split(/\s+/)) && m.length == 4) {
+  if ((m = v.trim().split(/\s+(?=[^\)]*(?:[\(]|$))/)) && m.length == 4) {
     return [m[0], m[3], m[2], m[1]].join(' ')
   }
   return v
